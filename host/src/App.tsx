@@ -9,7 +9,7 @@ console.log(loadRemote);
 // use createRemoteComponent to export remote component
 const ViteButton = createRemoteComponent({
 	// loader is for loading remote module, for example: loadRemote('remote1/export-app')、import('remote1/export-app')
-	loader: () => loadRemote('vite_guest_app/Button'),
+	loader: () => import('vite_guest_app/Button'),
 	// fallback is for error handling
 	fallback: () => <div>error</div>,
 	// loading is for loading state
